@@ -12,4 +12,14 @@ export class Article {
     this.author = author;
     this.createdAt = createdAt;
   }
+
+  get authorName(): string {
+    return this.author.name;
+  }
+
+  get formattedDate(): string {
+    return `${this.createdAt.getFullYear()}-${String(
+      this.createdAt.getMonth() + 1
+    ).padStart(2, "0")}-${String(this.createdAt.getDate()).padStart(2, "0")}`;
+  }
 }
