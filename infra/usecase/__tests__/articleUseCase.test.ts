@@ -1,8 +1,8 @@
 import { Article } from "../../../domain/article";
-import ArticlePort from "../../../interface/port/articlePort";
-import ArticleInteractor from "../articleInteractor";
+import ArticleRepository from "../../../interface/repository/articleRepository";
+import ArticleUseCaseImpl from "../articleUseCase";
 
-const articleGateway: ArticlePort = {
+const articleRepository: ArticleRepository = {
   findAll: (): Promise<Article[]> => {
     throw "not implemented";
   }
@@ -13,14 +13,11 @@ describe("#fetchArticles", () => {
     const article1 = { id: 1 } as Article;
     const article2 = { id: 2 } as Article;
     const findAllSpy = jest
-      .spyOn(articleGateway, "findAll")
+      .spyOn(articleRepository, "findAll")
       .mockReturnValue(new Promise(resolve => resolve([article1, article2])));
-    const articleInteractor = new ArticleInteractor(articleGateway);
+    const articleUseCase = new ArticleUseCaseImpl(articleRepository);
 
-    expect(await articleInteractor.fetchArticles()).toEqual([
-      article1,
-      article2
-    ]);
+    expect(await articleUseCase.fetchArticles()).toEqual([article1, article2]);
     expect(findAllSpy).toHaveBeenCalledTimes(1);
     findAllSpy.mockClear();
     findAllSpy.mockReset();

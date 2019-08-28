@@ -1,8 +1,8 @@
-import ArticleGateway from "../articleGateway";
 import { Article } from "../../../domain/article";
 import { Author } from "../../../domain/author";
 import { ApiArticles } from "../../driver/entity/article";
 import ArticleDriver from "../../../interface/driver/articleDriver";
+import ArticleRepositoryImpl from "../articleRepository";
 
 const articleDriver: ArticleDriver = {
   findAll: (): Promise<ApiArticles> => {
@@ -28,9 +28,9 @@ describe("#findAll", () => {
     const findAllSpy = jest
       .spyOn(articleDriver, "findAll")
       .mockReturnValue(new Promise(resolve => resolve(articles)));
-    const articleGateway = new ArticleGateway(articleDriver);
+    const articleRepository = new ArticleRepositoryImpl(articleDriver);
 
-    expect(await articleGateway.findAll()).toEqual([
+    expect(await articleRepository.findAll()).toEqual([
       new Article(
         1,
         "articleName",

@@ -1,9 +1,9 @@
-import ArticlePort from "../../interface/port/articlePort";
+import ArticleRepository from "../../interface/repository/articleRepository";
+import ArticleDriver from "../../interface/driver/articleDriver";
 import { Article } from "../../domain/article";
 import { Author } from "../../domain/author";
-import ArticleDriver from "../../interface/driver/articleDriver";
 
-export default class ArticleGateway implements ArticlePort {
+export default class ArticleRepositoryImpl implements ArticleRepository {
   private readonly articleDriver: ArticleDriver;
 
   constructor(articleDriver: ArticleDriver) {
