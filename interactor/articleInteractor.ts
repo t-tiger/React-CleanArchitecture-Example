@@ -1,7 +1,8 @@
-import ArticlePort from "../port/articlePort";
+import ArticlePort from "../interface/port/articlePort";
 import { Article } from "../domain/article";
+import { ArticleUseCase } from "../interface/useCase/articleUseCase";
 
-export default class ArticleUseCase {
+export default class ArticleInteractor implements ArticleUseCase {
   readonly articlePort: ArticlePort;
 
   constructor(articlePort: ArticlePort) {
