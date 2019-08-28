@@ -9,13 +9,34 @@
   "keywords": [],
   "author": "tiger <tachiba@gmail.com> (https://github.com/t-tiger)",
   "license": "ISC",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "testMatch": [
+      "**/__tests__/*.+(ts|tsx|js)"
+    ]
+  },
   "dependencies": {
-    "@types/react": "^16.9.2",
     "prettier": "^1.18.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   }
 }
