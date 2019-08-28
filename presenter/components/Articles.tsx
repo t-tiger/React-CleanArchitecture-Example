@@ -1,5 +1,6 @@
 import React from "react";
-import { Article } from "../domain/article";
+import { Article } from "../../domain/article";
+import ArticleItem from "./ArticleItem";
 
 type Props = {
   articles: Article[];
@@ -7,11 +8,11 @@ type Props = {
 
 const Articles = ({ articles }: Props) => {
   return (
-    <ul>
+    <>
       {articles.map(article => (
-        <li>{article.name}</li>
+        <ArticleItem key={article.id} article={article} />
       ))}
-    </ul>
+    </>
   );
 };
 
