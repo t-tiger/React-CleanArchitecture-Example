@@ -12,7 +12,7 @@ export default class ArticleGateway implements ArticlePort {
 
   async findAll(): Promise<Article[]> {
     const res = await this.articleDriver.findAll();
-    return res.map(
+    return res.articles.map(
       articleEntity =>
         new Article(
           articleEntity.id,

@@ -1,3 +1,7 @@
+export type ApiArticles = {
+  articles: ArticleEntity[];
+};
+
 export type ArticleEntity = {
   id: number;
   name: string;
