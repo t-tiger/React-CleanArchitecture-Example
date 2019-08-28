@@ -1,0 +1,21 @@
+{
+  "name": "clean_architecture_sample",
+  "version": "1.0.0",
+  "description": "Sample project of frontend CleanArchitecture using React.js",
+  "main": "index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tiger <tachiba@gmail.com> (https://github.com/t-tiger)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
