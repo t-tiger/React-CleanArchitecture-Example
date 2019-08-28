@@ -1,4 +1,4 @@
-import ArticlePort from "../port/articlePort";
+import ArticlePort from "../interface/port/articlePort";
 import { Article } from "../domain/article";
 import ArticleDriver from "../driver/articleDriver";
 import { Author } from "../domain/author";

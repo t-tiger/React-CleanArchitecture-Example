@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Articles from "./components/Articles";
-import ArticleUseCase from "../useCase/articleUseCase";
 import { Article } from "../domain/article";
+import { ArticleUseCase } from "../interface/useCase/articleUseCase";
 
 type Props = {
   useCase: ArticleUseCase;
