@@ -1,5 +1,5 @@
-import { Article } from "../../domain/article";
-import ArticlePort from "../../interface/port/articlePort";
+import { Article } from "../../../domain/article";
+import ArticlePort from "../../../interface/port/articlePort";
 import ArticleInteractor from "../articleInteractor";
 
 const articleGateway: ArticlePort = {

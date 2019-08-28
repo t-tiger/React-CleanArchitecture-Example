@@ -1,7 +1,7 @@
-import ArticlePort from "../interface/port/articlePort";
-import { Article } from "../domain/article";
-import ArticleDriver from "../driver/articleDriver";
-import { Author } from "../domain/author";
+import ArticlePort from "../../interface/port/articlePort";
+import { Article } from "../../domain/article";
+import { Author } from "../../domain/author";
+import ArticleDriver from "../../interface/driver/articleDriver";
 
 export default class ArticleGateway implements ArticlePort {
   private readonly articleDriver: ArticleDriver;

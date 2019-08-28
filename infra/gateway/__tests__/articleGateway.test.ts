@@ -1,8 +1,8 @@
 import ArticleGateway from "../articleGateway";
-import ArticleDriver from "../../driver/articleDriver";
-import { Article } from "../../domain/article";
-import { Author } from "../../domain/author";
+import { Article } from "../../../domain/article";
+import { Author } from "../../../domain/author";
 import { ApiArticles } from "../../driver/entity/article";
+import ArticleDriver from "../../../interface/driver/articleDriver";
 
 const articleDriver: ArticleDriver = {
   findAll: (): Promise<ApiArticles> => {
