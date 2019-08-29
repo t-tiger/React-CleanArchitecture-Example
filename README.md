@@ -1,8 +1,6 @@
 # Frontend Clean Architecture Example
 
-Introducing Clean Architecture will make application sustainable and improve testability.
-
-We can receive the benefits of Clean Architecture not only for backend app but also for the frontend app.
+Introducing Clean Architecture will make application sustainable and improve testability. We can receive the benefits of Clean Architecture not only for backend app but also for the frontend app.
 
 This project introduces Clean Architecture in frontend and executes unit test using mock in each layer.
 
