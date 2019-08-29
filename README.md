@@ -1,4 +1,4 @@
-# Frontend Clean Architecture Example
+# React Clean Architecture Example
 
 Introducing Clean Architecture will make application sustainable and improve testability. We can receive the benefits of Clean Architecture not only for backend app but also for the frontend app.
 
