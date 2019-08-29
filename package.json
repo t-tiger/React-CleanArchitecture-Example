@@ -1,7 +1,7 @@
 {
   "name": "clean_architecture_sample",
   "version": "1.0.0",
-  "description": "Sample project of frontend CleanArchitecture using React.js",
+  "description": "Sample project of frontend Clean Architecture using React.js and jest.",
   "main": "index.tsx",
   "scripts": {
     "start": "parcel index.html"
