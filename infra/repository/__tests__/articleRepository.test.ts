@@ -1,18 +1,18 @@
 import { Article } from "../../../domain/article";
 import { Author } from "../../../domain/author";
-import { ApiArticles } from "../../driver/entity/article";
+import { ArticlesJson } from "../../driver/entity/article";
 import ArticleDriver from "../../../interface/driver/articleDriver";
 import ArticleRepositoryImpl from "../articleRepository";
 
 const articleDriver: ArticleDriver = {
-  findAll: (): Promise<ApiArticles> => {
+  findAll: (): Promise<ArticlesJson> => {
     throw "not implemented";
   }
 };
 
 describe("#findAll", () => {
   test("domain articles are returned", async () => {
-    const articles: ApiArticles = {
+    const articles: ArticlesJson = {
       articles: [
         {
           id: 1,

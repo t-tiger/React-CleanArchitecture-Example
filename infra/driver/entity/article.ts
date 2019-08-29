@@ -1,8 +1,8 @@
-export type ApiArticles = {
-  articles: ArticleEntity[];
+export type ArticlesJson = {
+  articles: ArticleJson[];
 };
 
-export type ArticleEntity = {
+export type ArticleJson = {
   id: number;
   name: string;
   author: {

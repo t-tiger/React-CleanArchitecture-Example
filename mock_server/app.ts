@@ -20,4 +20,5 @@ app.get("/articles", (req, res) => {
     }))
   });
 });
+
 app.listen(3000);
