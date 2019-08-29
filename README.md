@@ -22,27 +22,9 @@ $ yarn start
 
 ## Frontend
 
-This project relies on [parcel](https://github.com/parcel-bundler/parcel) to get started with minimal configuration. First install parcel globally.
-
-install with yarn
-```bash
-yarn global add parcel-bundler
-```
-or install with npm
-```bash
-npm install -g parcel-bundler
-```
-
-Then install the libraries project requires.
-
 ```bash
 $ yarn install
-```
-
-Finally, run the parcel command to start the web server and build files.
-
-```bash
-$ parcel index.html
+$ yarn start
 ```
 
 Then open `http://localhost:1234` in your browser.
