@@ -1,5 +1,5 @@
 import { ArticlesJson } from "./entity/article";
-import ArticleDriver from "../../interface/driver/articleDriver";
+import ArticleDriver from "../interface/driver/articleDriver";
 
 export default class ArticleDriverImpl implements ArticleDriver {
   async findAll(): Promise<ArticlesJson> {

@@ -1,5 +1,5 @@
-import { Article } from "../../../domain/article";
-import ArticleRepository from "../../../interface/repository/articleRepository";
+import { Article } from "../../domain/article";
+import ArticleRepository from "../../interface/repository/articleRepository";
 import ArticleUseCaseImpl from "../articleUseCase";
 
 const articleRepository: ArticleRepository = {

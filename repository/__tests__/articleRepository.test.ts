@@ -1,7 +1,7 @@
-import { Article } from "../../../domain/article";
-import { Author } from "../../../domain/author";
+import { Article } from "../../domain/article";
+import { Author } from "../../domain/author";
 import { ArticlesJson } from "../../driver/entity/article";
-import ArticleDriver from "../../../interface/driver/articleDriver";
+import ArticleDriver from "../../interface/driver/articleDriver";
 import ArticleRepositoryImpl from "../articleRepository";
 
 const articleDriver: ArticleDriver = {
