@@ -14,7 +14,7 @@ There is a flow to fetch some data in frontend, for that preparing a mock server
 
 ```bash
 $ cd mock_server 
-$ yarn add
+$ yarn
 $ yarn start
 ```
 
@@ -26,6 +26,4 @@ $ yarn start
 ```
 
 Then open `http://localhost:1234` in your browser.
-
-
 
