@@ -1,13 +1,15 @@
 import { Article } from "../../domain/article";
 import { Author } from "../../domain/author";
-import ArticleDriver, { ArticlesJson } from "../../interface/driver/articleDriver";
+import ArticleDriver, {
+  ArticlesJson
+} from "../../interface/driver/articleDriver";
 import ArticleRepositoryImpl from "../articleRepository";
 
-const articleDriver: ArticleDriver = {
-  findAll: (): Promise<ArticlesJson> => {
+class ArticleDriverMock implements ArticleDriver {
+  findAll(): Promise<ArticlesJson> {
     throw "not implemented";
   }
-};
+}
 
 describe("#findAll", () => {
   test("domain articles are returned", async () => {
@@ -24,10 +26,9 @@ describe("#findAll", () => {
         }
       ]
     };
-    const findAllSpy = jest
-      .spyOn(articleDriver, "findAll")
-      .mockReturnValue(new Promise(resolve => resolve(articles)));
-    const articleRepository = new ArticleRepositoryImpl(articleDriver);
+    const mock = new ArticleDriverMock();
+    mock.findAll = async () => articles;
+    const articleRepository = new ArticleRepositoryImpl(mock);
 
     expect(await articleRepository.findAll()).toEqual([
       new Article(
@@ -37,8 +38,5 @@ describe("#findAll", () => {
         new Date("2019-01-01")
       )
     ]);
-    expect(findAllSpy).toHaveBeenCalledTimes(1);
-    findAllSpy.mockClear();
-    findAllSpy.mockReset();
   });
 });
